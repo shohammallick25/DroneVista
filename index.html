@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Shoham Mallick || DroneVista.</title>
     <link rel="shortcut icon" href="assets/header.png" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json" />
+
   </head>
   <body>
     <nav>
@@ -279,5 +281,15 @@ Explore the groundbreaking advancements in drone delivery and how they’re tran
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+   <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('service-worker.js')
+    .then(reg => console.log('✅ Service Worker registered!', reg.scope))
+    .catch(err => console.error('❌ Service Worker registration failed:', err));
+}
+</script>
+
+
   </body>
 </html>
